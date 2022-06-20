@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3;">
+Circle and parabola</canvas>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(100,70,40,0,2*Math.PI);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(47, 40);
+ctx.quadraticCurveTo(100, 220, 153, 40);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(47, 131);
+ctx.lineTo(153, 131);
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(100, 10);
+ctx.lineTo(100, 151);
+ctx.stroke();
+</script> 
+</body>
+</html>
