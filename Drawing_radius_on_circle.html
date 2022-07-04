@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="myCanvas" width="400" height="150" style="border:1px solid #d3d3d3;">
+Drawing vertex lines on circle</canvas>
+<br>
+<select name="color" id="ball">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+    <option value="yellow">yellow</option>
+  </select>
+<button type="button" onclick="initCanvas()">Reset</button>
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+function initCanvas(){
+ctx.clearRect(0, 0, 400, 150);
+ctx.beginPath();
+ctx.arc(200, 75, 50, 0, 2 * Math.PI);
+ctx.strokeStyle = "#000000";
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(200, 75);
+ctx.lineTo(250, 75);
+ctx.strokeStyle = "#000000";
+ctx.stroke();
+ctx.beginPath();
+ctx.moveTo(200, 75);
+ctx.lineTo(150, 75);
+ctx.strokeStyle = "#000000";
+ctx.stroke();
+}
+function fillcircle(canvas, event) {
+    const rect = canvas.getBoundingClientRect()
+    const x = event.clientX - rect.left
+    const y = event.clientY - rect.top
+    var s = document.getElementById("ball");
+    var color = s.value; 
+	var a = x - 200;
+	var b = y - 75;
+      var c = Math.sqrt( a*a + b*b );
+  	var theta = Math.acos(a/c);
+	if((x>=200)&&(y>=75)){
+		theta = (1)*theta;
+	}else if((x>=200)&&(y<=75)){
+		theta = (-1)*theta;
+	}else if((x<=200)&&(y<=75)){
+		theta =  (-1)*theta;;
+	}else if((x<=200)&&(y>=75)){
+		theta = (1)*theta;
+	}      	
+	var boundary_x = 50*Math.cos(theta);	
+	var boundary_y = 50*Math.sin(theta);
+      console.log("theta:"+theta+" boundary_x: " + boundary_x + " boundary_y: " + boundary_y);
+    if((x>150)&&(x<250)&&(y>25)&&(y<125)){
+      ctx.beginPath();
+      ctx.moveTo(200, 75);
+      ctx.lineTo(boundary_x+200, boundary_y+75);
+      ctx.strokeStyle = color;
+      ctx.stroke();
+	}
+}
+window.addEventListener('load', function(event) {
+initCanvas();
+});
+c.addEventListener('click', function(e) {
+     fillcircle(c, e);
+	
+})
+</script> 
+</body>
+</html>
