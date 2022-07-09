@@ -29,6 +29,7 @@ function storeCoordinate(x, y, array) {
 }
 function Connect(canvas, event){
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.fillRect(array[0], array[1], 10, 10);
 	for (var i = 0; i <= array.length-4; i+=2) {
     var a = array[i];
     var b = array[i+1];
@@ -37,7 +38,9 @@ function Connect(canvas, event){
     ctx.beginPath();
 	ctx.moveTo(a, b);
 	ctx.lineTo(c, d);
-	ctx.stroke();   
+	ctx.stroke(); 
+	ctx.fillRect(a, b, 10, 10);
+	ctx.fillRect(c, d, 10, 10);
 } 
     var p = array[array.length - 2];
     var q = array[array.length - 1];
