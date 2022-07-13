@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>JavaScript Arrays</h2>
+<p id="demo"></p>
+<script>
+var arr1 =[
+		[1,5,7],
+		[2,4,8]	
+];
+var arr2 = [1,2,3];
+function filterByProperty(array1,array2){
+    var filtered = [];
+    for(var i = 0; i < array1.length; i++){
+        var obj = array1[i];
+	  var	intersect = obj.filter(e=> array2.indexOf(e) !== -1);
+       	filtered.push(intersect);
+    }    
+    return filtered;
+}
+var number = filterByProperty(arr1,arr2);
+document.getElementById("demo").innerHTML = number;
+</script>
+</body>
+</html>
