@@ -13,7 +13,7 @@ function filterByProperty(array1,array2){
     var filtered = [];
     for(var i = 0; i < array1.length; i++){
         var obj = array1[i];
-	  var	intersect = obj.filter(e=> array2.indexOf(e) !== -1);
+	var intersect = obj.filter(e=> array2.indexOf(e) !== -1);
        	filtered.push(intersect);
     }    
     return filtered;
