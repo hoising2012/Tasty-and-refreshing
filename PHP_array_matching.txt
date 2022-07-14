@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$array1 = array(array(1,5,7),array(2,4,8));
+$array2 = array(1,2,3);
+$keys = array_keys($array1);
+for($i = 0; $i < count($array1); $i++) {
+    foreach($array1[$keys[$i]] as $key => $value) {
+    	foreach($array2 as $v){
+        	if($v == $value){
+        		echo $v." ";
+       		 }
+        }
+	}
+}
+?>
+</body>
+</html>
