@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+$P=array(0,-1);
+$Q=array();
+echo "<table>";
+echo "<tr>";
+for($i=0; $i<=1; $i++){
+	if($i==0){
+	$Q[$i]=1/($P[$i]-1);
+	}else{
+    $Q[$i]=1/P[$i];
+    }
+	echo "<td>$Q[$i]</td>";
+}
+echo "</tr>";
+$N_0=sqrt($Q[0]);
+$N_1=sqrt($Q[1]);
+echo "<tr>";
+echo "<td>$N_1</td>";
+echo "<td>$N_0</td>";
+echo "</tr>";
+echo "</table>";
+?>
+</body>
+</html>
