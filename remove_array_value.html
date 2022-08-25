@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h>The original array:</h>
+<p id="demo"></p>
+<h>The array after manupilation:</h>
+<p id="demo_1"></p>
+<script>
+const arr1 = [1,5,7,2,4,8];
+arr1.forEach(myFunction)
+document.getElementById("demo").innerHTML = arr1;
+function myFunction(item, index, arr) {
+  arr[index] = item;
+}
+const myArray = arr1;
+myArray.splice(2,1);
+document.getElementById("demo_1").innerHTML = myArray;
+</script>
+</body>
+</html>
