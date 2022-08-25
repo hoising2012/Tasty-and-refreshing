@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$Arr=array(1,2,3,4,5);
+$del_val=4;
+$key = array_search($del_val, $Arr);
+if (false !== $key) {
+    unset($Arr[$key]);
+}
+var_dump($Arr);
+?>
+</body>
+</html>
