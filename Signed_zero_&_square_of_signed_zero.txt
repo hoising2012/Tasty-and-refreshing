@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$q=2;
+$product=1;
+for($m=1; $m<=99; $m++){
+	$X=1-pow($q,$m);
+    $Y=1/$X;
+	$product = $product*$Y;
+}
+echo "The signed zero is ".$product.".";
+echo "<br \>";
+echo "The square of signed zero is ".$product*$product.".";
+?>
+</body>
+</html>
