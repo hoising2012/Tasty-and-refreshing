@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+echo "The preliminary result of adding prime numbers: ";
+echo "<br \>";
+echo "{ ";
+$F=Addition_of_prime(2,3);
+echo $F." ";
+$F=Addition_of_prime(3,5);
+echo $F." ";
+$F=Addition_of_prime(5,7);
+echo $F." ";
+$F=Addition_of_prime(7,11);
+echo $F." ";
+$F=Addition_of_prime(11,13);
+echo $F." ";
+echo "}";
+function Addition_of_prime($a, $b){
+$S=pow($a,$b)+pow($b,$a);
+$result=$S%($a*$b);
+echo $result;
+}
+?>
+</body>
+</html>
