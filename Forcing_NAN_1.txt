@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;    
+}
+</style>
+</head>
+<body>
+<?php
+$a=1;
+$i=0;
+echo "<table>";
+echo "<tr>";
+while($i<=1){
+	$F=($a-1)/($a+1);
+	echo "<td>$F</td>";
+    $a=$F;
+$i++;	
+}
+echo "</tr>";
+echo "<tr>";
+$j=2;
+while($j<=3){
+	$F=($a-1)/($a+1);
+	echo "<td>$F</td>";
+    $a=$F;
+$j++;	
+}
+echo "</tr>";
+echo "</table>";
+?>
+</body>
+</html>
