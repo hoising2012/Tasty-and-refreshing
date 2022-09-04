@@ -2,8 +2,8 @@
 <html>
 <body>
 <?php
-$x=1/12;
-$percent = round((float)$x * 100 );
+$a=1/12;
+$percent = round((float)$a * 100 );
 echo "The percentage error: ".$percent.'%';
 echo "<br \>";
 $G=gcd($percent,100);
@@ -11,6 +11,9 @@ $X=$percent/$G;
 $Y=100/$G;
 $fraction=$X."/".$Y;
 echo "The nearest number of fraction: ".$fraction;
+echo "<br \>";
+$deviation=$a-($X/$Y);
+echo "The deviation of original fraction: ".$deviation;
 function gcd($B, $A){
 $n=0;
 $P="";
