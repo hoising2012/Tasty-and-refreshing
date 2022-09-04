@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$x=1/6;
+$percent = round((float)$x * 100 );
+echo "The percentage error: ".$percent.'%';
+echo "<br \>";
+$G=gcd($percent,100);
+$X=$percent/$G;
+$Y=100/$G;
+$fraction=$X."/".$Y;
+echo "The nearest number of fraction: ".$fraction;
+function gcd($B, $A){
+$n=0;
+$P="";
+$Q="";
+do{
+	$C=floor($A/$B);
+    $F=$A-($C*$B);
+	$A=$B;
+    $B=$F;
+    $n++;
+}while($F>0);
+for($i=1; $i<=$n; $i++){
+	$P=floor($A/$B);
+	$Q=$A-$Q*$B;	
+}
+return $Q;
+}
+?>
+</body>
+</html>
