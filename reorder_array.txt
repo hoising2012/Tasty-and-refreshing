@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$arr=array(2,1,3,6,9,10,4,5,8,7);
+rsort($arr);
+var_dump($arr); // gives the output.
+sort($arr);
+var_dump($arr);
+?>
+</body>
+</html>
