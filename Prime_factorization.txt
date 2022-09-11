@@ -18,7 +18,7 @@ $n=1092;
 echo "<table>";
 echo "<tr>";
 echo "<th>Prime factors</th>";
-echo "<th>Quotient</th>";
+echo "<th>Quotients</th>";
 echo "</tr>";
 while($n%2==0){
         echo "<tr>";
