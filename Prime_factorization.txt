@@ -27,8 +27,7 @@ while($n%2==0){
 		echo "</tr>";        
         $n=$n/2;
 }
-$PF="";
-$PG="";
+$QF="";
 for($i=3; $i<=$n; $i++){
 	echo "<tr>";
 	$t=$n/$i;
@@ -37,9 +36,8 @@ for($i=3; $i<=$n; $i++){
     if($PC==1){
     	echo "<td>$i</td>";
 		echo "<td>$n</td>";
-        $PG=$n;
+        $QF=$n/$i;
         $n=$t;
-        $PF=$i;
     }
     echo "</tr>";    
 }
@@ -51,7 +49,7 @@ if($n==1){
 }
 echo "<table>";
 echo "<br \>";
-echo "The Q factor is: ".round($PG/$PF,1);
+echo "The Q factor is: ".round($QF,1);
 function primeCheck($number){
     if ($number == 1)
     return 0;
