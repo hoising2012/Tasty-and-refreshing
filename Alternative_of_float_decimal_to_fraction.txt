@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+<?php
+$a=17.48;
+$b=strpos($a,".");
+$x=floor($a);
+$y=substr($a,$b+1);
+echo "The original decimal number is: ".$a;
+echo "<br \>";
+echo "The whole part is equal to: ".$x;
+echo "<br \>";
+echo "The decimal part is equal to: ".$y;
+$g=gcd(48,100);
+$p=$y/$g;
+$q=100/$g;
+echo "<br \>";
+echo "The nearest fraction of 48/100: "."$p/$q";
+$F=$p+$q*$x;
+$g_1=gcd($q,$F);
+$s=$F/$g_1;
+$t=$q/$g_1;
+echo "<br \>";
+echo "To convert, the nearest fraction of 17+48/100: "."$s/$t";
+function gcd($B, $A){
+$n=0;
+$P="";
+$Q="";
+do{
+	$C=floor($A/$B);
+    $F=$A-($C*$B);
+	$A=$B;
+    $B=$F;
+    $n++;
+}while($F>0);
+for($i=1; $i<=$n; $i++){
+	$P=floor($A/$B);
+	$Q=$A-$Q*$B;	
+}
+return $Q;
+}
+?>
+</body>
+</html>
