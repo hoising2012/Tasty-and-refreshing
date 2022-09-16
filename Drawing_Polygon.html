@@ -42,11 +42,11 @@ function Connect(canvas, event){
 	ctx.fillRect(a, b, 10, 10);
 	ctx.fillRect(c, d, 10, 10);
 } 
+    if(array.length>4){
     var p = array[array.length - 2];
     var q = array[array.length - 1];
     var r = array[0];
     var s = array[1];
-	if(array.length>4){
         ctx.beginPath();
 	ctx.moveTo(p, q);
 	ctx.lineTo(r, s);
