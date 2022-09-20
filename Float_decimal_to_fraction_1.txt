@@ -2,7 +2,8 @@
 <html>
 <body>
 <?php
-$a=17.48;
+$a=17.481;
+$a=round($a,2);
 $b=strpos($a,".");
 $x=floor($a);
 $y=substr($a,$b+1);
