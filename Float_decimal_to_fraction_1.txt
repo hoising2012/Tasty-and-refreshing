@@ -12,7 +12,7 @@ echo "<br \>";
 echo "The whole part is equal to: ".$x;
 echo "<br \>";
 echo "The decimal part is equal to: ".$y;
-$g=gcd(48,100);
+$g=gcd($y,100);
 $p=$y/$g;
 $q=100/$g;
 echo "<br \>";
