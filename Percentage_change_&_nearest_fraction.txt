@@ -13,6 +13,7 @@ $fraction=$X."/".$Y;
 echo "The nearest number of fraction: ".$fraction;
 echo "<br \>";
 $deviation=$a-($X/$Y);
+$deviation=round($deviation,4);
 echo "The deviation of original fraction: ".$deviation;
 function gcd($B, $A){
 $n=0;
