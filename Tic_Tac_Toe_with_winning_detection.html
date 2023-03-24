@@ -44,8 +44,10 @@ function Alert_winner(){
 	if (isVictory(cells)) {
 			if(count%2==0){
 				alert("O wins! Please reset game.");
+				Blockage();
 				}else{
 				alert("X wins! Please reset game.");
+				Blockage();
 				}
 			}else if(count==9){
 			alert("Game draw! Please reset game.");
@@ -93,6 +95,12 @@ function Reset(){
 	myElement.classList.remove('disable');
 	}
 	count = 0;
+}
+function Blockage(){
+	for(var i=1; i<=9; i++){
+	const myElement = document.getElementById(i);
+	myElement.classList.add('disable');
+	}
 }
 </script>
 </body>
