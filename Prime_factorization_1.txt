@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<?php
+echo "<p>The prime factors of 1092:</p>";
+prime_Factors(1092);
+function prime_Factors($n){
+while( $n%2 == 0 ){
+        echo"2 ";
+            $n = $n/2;
+        }
+    	for($i = 3; $i < $n ; $i++){
+        	if($n % $i == 0){
+                echo"$i ";
+                $n = $n/$i;
+            } 		
+        }
+        echo "<br \>";
+        if($n!=1){
+        	echo"<p>The Q factor is $n.</p>";
+        }  
+}
+?>
+</body>
+</html>
