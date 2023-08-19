@@ -29,19 +29,19 @@ while($n%2==0){
 }
 $QF="";
 for($i=3; $i<=$n; $i++){
-	echo "<tr>";
 	while($n % $i == 0){
 		$t=$n/$i;
     		$t=floor($t);
 		$PC=primeCheck($i);
     		if($PC==1){
+			echo "<tr>";
     			echo "<td>$i</td>";
 			echo "<td>$n</td>";
+			echo "</tr>";   
         		$QF=$n/$i;
         		$n=$t;
     		}
 	}
-    echo "</tr>";    
 }
 if($n==1){
 	echo "<tr>";
