@@ -26,15 +26,15 @@
 <body>
 <h1>Tic-Tac-Toe</h1>
 <div class="grid-container">
-  <div class="grid-item" id="8" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="1" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="6" onclick="myFunction(this);isVictory(cells);"></div>  
-  <div class="grid-item" id="3" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="5" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="7" onclick="myFunction(this);isVictory(cells);"></div>  
-  <div class="grid-item" id="4" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="9" onclick="myFunction(this);isVictory(cells);"></div>
-  <div class="grid-item" id="2" onclick="myFunction(this);isVictory(cells);"></div>  
+  <div class="grid-item" id="cell8" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell1" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell6" onclick="myFunction(this);isVictory(cells);"></div>  
+  <div class="grid-item" id="cell3" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell5" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell7" onclick="myFunction(this);isVictory(cells);"></div>  
+  <div class="grid-item" id="cell4" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell9" onclick="myFunction(this);isVictory(cells);"></div>
+  <div class="grid-item" id="cell2" onclick="myFunction(this);isVictory(cells);"></div>  
 </div>
 <button onclick="Reset()">Reset</button>
 <script>
@@ -88,18 +88,20 @@ function myFunction(object) {
 	Alert_winner();
 	}
 function Reset(){
-	for(var i=1; i<=9; i++){
-	const myElement = document.getElementById(i);
-	myElement.innerHTML = "";
-	myElement.classList.remove('disable');
-	}
+	var grids = document.getElementsByClassName('grid-item');
+	    for(var x=0; x < grids.length; x++)
+        {
+	    grids[x].innerHTML = "";	
+            grids[x].classList.remove('disable');
+        }
 	count = 0;
 }
 function Blockage(){
-	for(var i=1; i<=9; i++){
-	const myElement = document.getElementById(i);
-	myElement.classList.add('disable');
-	}
+	var grids = document.getElementsByClassName('grid-item');
+	    for(var x=0; x < grids.length; x++)
+        {
+            grids[x].classList.add('disable');
+        }
 }
 </script>
 </body>
